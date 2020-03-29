@@ -1,0 +1,2 @@
+rootProject.name='ToDoManager5'
+include ':app'

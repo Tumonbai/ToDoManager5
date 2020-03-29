@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditTaskActivity">
+
+    <EditText
+        android:id="@+id/tv_edit_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Title"
+        android:gravity="center_horizontal" />
+
+    <EditText
+        android:id="@+id/tv_edit_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_edit_title"
+        android:text="Description"/>
+
+    <TextView
+        android:id="@+id/tv_edit_start_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="21.03.2020"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_edit_description"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_edit_deadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30.04.2020"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_edit_start_date"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <CheckBox
+        android:id="@+id/edit_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        app:layout_constraintLeft_toRightOf="@id/tv_checkbox_text"
+        app:layout_constraintTop_toBottomOf="@id/tv_edit_deadline"
+        android:layout_marginTop="10dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_checkbox_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Completed: "
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_edit_deadline"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+    <Button
+        android:id="@+id/btn_edit_start_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose start date"
+        android:onClick="onChooseStartDate"
+        app:layout_constraintTop_toBottomOf="@id/tv_edit_description"
+        app:layout_constraintLeft_toRightOf="@id/tv_edit_deadline"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_edit_deadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose deadline"
+        android:onClick="onChooseDeadline"
+        app:layout_constraintTop_toBottomOf="@id/btn_edit_start_date"
+        app:layout_constraintLeft_toRightOf="@id/tv_edit_deadline"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_edit_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:onClick="onEditSave"
+        app:layout_constraintTop_toBottomOf="@id/edit_checkbox"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"/>
+
+    <Button
+        android:id="@+id/btn_edit_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:onClick="onEditCancel"
+        app:layout_constraintTop_toBottomOf="@id/edit_checkbox"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/btn_edit_save"
+        android:layout_marginLeft="10dp"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

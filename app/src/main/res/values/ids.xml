@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="recycler_view" type="id" />
+    <item name="text_view" type="id" />
+    <item name="btn_save" type="id" />
+    <item name="btn_edit" type="id" />
+    <item name="details_title" type="id" />
+    <item name="details_description" type="id" />
+    <item name="details_start_date" type="id" />
+    <item name="details_deadline" type="id" />
+    <item name="detailed_checkbox" type="id" />
+</resources>
